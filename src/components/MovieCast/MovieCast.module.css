@@ -1,0 +1,43 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.item {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    background-color: #333;
+}
+
+.placeholder {
+    width: 100%;
+    aspect-ratio: 2/3;
+    background-color: #333;
+}
+
+.info {
+    padding: var(--spacing-sm);
+}
+
+.name {
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.character {
+    font-size: 0.8rem;
+    margin: 0;
+    color: var(--text-secondary);
+}
