@@ -3,28 +3,27 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
+    list-style: none;
 }
 
 .item {
-    background-color: var(--surface-color);
-    padding: var(--spacing-md);
-    border-radius: 8px;
-    border-left: 4px solid var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-md);
 }
 
 .author {
     margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+    font-weight: 700;
     color: var(--text-primary);
-    font-size: 1.1rem;
 }
 
 .author span {
     font-weight: 400;
-    color: var(--accent-color);
 }
 
 .content {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    white-space: pre-wrap;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--text-primary);
 }

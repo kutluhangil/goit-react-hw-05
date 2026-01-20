@@ -79,14 +79,18 @@ export default function MovieDetailsPage() {
 
       <div className={css.additionalInfo}>
         <h3 className={css.subHeading}>Additional Information</h3>
-        <nav className={css.nav}>
-          <NavLink to="cast" className={buildLinkClass}>
-            Cast
-          </NavLink>
-          <NavLink to="reviews" className={buildLinkClass}>
-            Reviews
-          </NavLink>
-        </nav>
+        <ul className={css.nav}>
+          <li>
+            <NavLink to="cast" className={buildLinkClass}>
+              Cast
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="reviews" className={buildLinkClass}>
+              Reviews
+            </NavLink>
+          </li>
+        </ul>
       </div>
 
       <Outlet />

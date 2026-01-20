@@ -1,24 +1,31 @@
 .backLink {
     display: inline-block;
-    margin-bottom: var(--spacing-md);
-    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
     font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    padding: 4px 12px;
+    border-radius: 4px;
 }
 
 .backLink:hover {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
 }
 
 .detailsContainer {
     display: flex;
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-lg);
 }
 
 .poster {
-    width: 300px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 240px;
+    display: block;
 }
 
 .info {
@@ -27,47 +34,32 @@
 
 .title {
     margin: 0 0 var(--spacing-md) 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-primary);
-}
-
-.year {
-    font-weight: 400;
-    color: var(--text-secondary);
 }
 
 .score {
-    font-size: 1.1rem;
-    margin-bottom: var(--spacing-lg);
-}
-
-.scoreValue {
-    color: var(--accent-color);
-    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .heading {
-    margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
-    font-size: 1.25rem;
-    color: var(--text-primary);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 4px;
-    display: inline-block;
+    margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .overview {
-    line-height: 1.7;
-    color: var(--text-secondary);
-    max-width: 800px;
+    line-height: 1.5;
+    color: var(--text-primary);
 }
 
 .genres {
-    color: var(--text-secondary);
+    color: var(--text-primary);
 }
 
 .additionalInfo {
-    border-top: 1px solid var(--border-color);
-    padding-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
 }
 
 .subHeading {
@@ -77,26 +69,17 @@
 
 .nav {
     display: flex;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    list-style: inside;
+    padding-left: 20px;
 }
 
 .navLink {
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    transition: all var(--transition-speed);
+    color: #0000ee;
+    text-decoration: underline;
 }
 
 .navLink:hover {
-    border-color: var(--accent-color);
-    color: var(--text-primary);
-}
-
-.activeNavLink {
-    background-color: var(--accent-color);
-    color: #121212 !important;
-    border-color: var(--accent-color);
+    color: var(--accent-color);
 }

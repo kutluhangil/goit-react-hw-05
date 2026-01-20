@@ -1,30 +1,33 @@
 :root {
-  /* Colors - Minimalist Soft Dark Theme */
-  --bg-color: #121212;
-  --surface-color: #1e1e1e;
-  --text-primary: #e0e0e0;
-  --text-secondary: #a0a0a0;
-  --accent-color: #f5c518; /* Gold/Yellow for cinema feel */
-  --accent-hover: #d4a000;
-  --border-color: #333333;
-  --error-color: #e57373;
+  /* Colors - Clean & Simple Light Theme */
+  --bg-color: #ffffff;
+  --surface-color: #ffffff;
+  --text-primary: #212121;
+  --text-secondary: #5a5a5a;
+  --accent-color: #c2185b;
+  /* Medium Pink/Red (similar to assignment screenshot) */
+  --accent-hover: #e91e63;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 
   /* Spacing */
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
-  --spacing-xl: 40px;
+  --spacing-xl: 32px;
 
   /* Typography */
-  --font-family: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-size-base: 16px;
-  --line-height-base: 1.6;
+  --line-height-base: 1.5;
 
   /* Transitions */
-  --transition-speed: 0.3s;
+  --transition-speed: 0.2s;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -38,29 +41,44 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 var(--spacing-md) 0;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
 
 p {
   margin: 0 0 var(--spacing-md) 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
+  /* We can add bullets back in specific components if needed, or keeping it clean */
   padding: 0;
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-primary);
   transition: color var(--transition-speed);
 }
 
@@ -78,4 +96,5 @@ button {
   cursor: pointer;
   border: none;
   font-family: inherit;
+  background: none;
 }
