@@ -6,18 +6,18 @@ export default function HomePage() {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    async function loadTrending() {
-      try {
-        const data = await fetchTrendingMovies();
-        setMovies(data);
-      } catch (err) {
-        setError(true);
-      }
+useEffect(() => {
+  async function loadTrending() {
+    try {
+      const data = await fetchTrendingMovies();
+      setMovies(data);
+    } catch {
+      setError(true);
     }
+  }
 
-    loadTrending();
-  }, []);
+  loadTrending();
+}, []);
 
   if (error) {
     return <p>Something went wrong 😢</p>;
