@@ -1,7 +1,52 @@
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { searchMovies } from "../../services/tmdb-api";
+import MovieList from "../../components/MovieList/MovieList";
+
 export default function MoviesPage() {
+  const [movies, setMovies] = useState([]);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get("query") ?? "";
+
+  useEffect(() => {
+    if (!query) return;
+
+    async function loadMovies() {
+      try {
+        setLoading(true);
+        const data = await searchMovies(query);
+        setMovies(data);
+      } catch {
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadMovies();
+  }, [query]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const value = e.target.elements.search.value.trim();
+    if (!value) return;
+
+    setSearchParams({ query: value });
+  };
+
   return (
     <div>
-      <h1>Search movies</h1>
+      <form onSubmit={handleSubmit}>
+        <input name="search" defaultValue={query} />
+        <button type="submit">Search</button>
+      </form>
+
+      {loading && <p>Loading...</p>}
+      {error && <p>Something went wrong 😢</p>}
+      {movies.length > 0 && <MovieList movies={movies} />}
     </div>
   );
 }
